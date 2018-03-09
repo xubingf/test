@@ -1,0 +1,8 @@
+<h3>My Dashboard</h3>
+<nav>
+<a *ngFor="let hero of heros" [routerLink]="['/hero',hero.id]">{{hero.name}}
+</a>
+</nav>
+<input #heroname  />
+<!--div *ngFor="let hero of heros|async" >{{hero.name}}</div-->
+<button (click)="findhero(heroname.value)" >查找</button>
